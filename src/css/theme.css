@@ -1,0 +1,215 @@
+:root {
+  /* Colors live in variables so you can retheme from one place */
+  --bg: #0f1115;
+  --surface: #1a1d24;
+  --border: #2a2f3a;
+  --text: #e8eaed;
+  --text-muted: #a0a7b4;
+  --accent: #6aa9ff;
+  --featured: #ffcc66;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  line-height: 1.6;
+}
+
+/* Page container: centered, with a max width and side padding */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: var(--text);
+}
+
+/* Section component */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+  color: var(--text);
+}
+
+.section p {
+  color: var(--text-muted);
+}
+
+/* Responsive grid: as many 280px+ columns as fit, wrapping on small screens */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ProjectCard component */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  color: var(--text);
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+a.project-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover; /* crop to fill, rather than stretching */
+  border-radius: 8px;
+}
+
+.project-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.project-info p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+}
+
+/* Tag component: put tags inside <div className="tags"> */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: rgba(106, 169, 255, 0.1);
+}
+
+/* Optional variant: <span className="tag featured"> */
+.tag.featured {
+  color: var(--featured);
+  background: rgba(255, 204, 102, 0.12);
+  border-color: rgba(255, 204, 102, 0.4);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+
+.gallery-main {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain; /* show the whole screenshot, no cropping */
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-thumbs {
+  display: flex; /* children go in a row */
+  gap: 0.5rem; /* space between them */
+  overflow-x: auto; /* scroll sideways if there are too many to fit */
+  padding: 0.25rem 0; /* room for the highlight outline */
+}
+
+.gallery-thumb {
+  flex: 0 0 120px; /* don't grow, don't shrink, always 120px wide */
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  overflow: hidden; /* clip the image to the rounded corners */
+  opacity: 0.6;
+  transition:
+    opacity 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.gallery-thumb.selected {
+  opacity: 1;
+  border-color: var(--accent);
+}
+
+.gallery-thumb:hover {
+  opacity: 1;
+}
+
+.gallery-thumb img {
+  display: block; /* removes a small gap under inline images */
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.pixel-art {
+  image-rendering: pixelated;
+}
+
+.page iframe,
+.page video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 8px;
+}
+
+.gallery-viewer {
+  display: flex;
+  align-items: center; /* vertically center the arrows beside the image */
+  gap: 0.5rem;
+}
+
+.gallery-viewer .gallery-main {
+  flex: 1; /* image takes all the remaining width */
+  min-width: 0; /* lets it shrink properly inside flex */
+}
+
+.gallery-nav {
+  flex: 0 0 auto;
+  font-size: 2rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+}
