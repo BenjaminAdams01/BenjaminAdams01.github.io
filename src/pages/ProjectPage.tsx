@@ -4,6 +4,7 @@ import Tag from "../components/Tag";
 import NotFound from "../components/NotFound";
 import Gallery from "../components/Gallery";
 import Button from "../components/Button";
+import Contributions from "../components/Contributions";
 
 function ProjectPage() {
   const { id } = useParams();
@@ -23,14 +24,15 @@ function ProjectPage() {
   return (
     <div className="page">
       <Button onClick={handleClick}>Back To Projects</Button>
-      <h1>{project.title}</h1>
-      <div className="tags">
+      <h1 className="center">{project.title}</h1>
+      <div className="tags center">
         {project.tags.map((t) => (
           <Tag key={t}>{t}</Tag>
         ))}
       </div>
-      <p>{project.longDescription}</p>
       <Gallery key={project.id} images={project.screenshots} />
+      <p>{project.longDescription}</p>
+      <Contributions contributions={project.contributions}></Contributions>
       {project.video && <video src={project.video} controls />}
       <iframe
         src="https://www.youtube.com/embed/gURgiWKomqw"
