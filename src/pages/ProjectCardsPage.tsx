@@ -17,29 +17,44 @@ function ProjectCardsPage() {
     );
 
   return (
-    <div className="page">
-      <Section title="Projects">
-        <input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search projects..."
-          aria-label="Search projects"
-          type="search"
-        />
-        <label>
-          Featured Only
-          <input
-            type="checkbox"
-            checked={featuredOnly}
-            onChange={(e) => setFeaturedOnly(e.target.checked)}
-          />
-        </label>
-        <div className="projects-grid">
-          {visibleProjects.length > 0
-            ? visibleProjects.map((p) => <ProjectCard key={p.id} {...p} />)
-            : "No Projects Match Query"}
+    <div
+      className="pixel-art"
+      style={{
+        backgroundImage: `url("/elements/MenuBackgroundRedone.png")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        minHeight: "100vh",
+        width: "100%",
+      }}
+    >
+      <div className="page">
+        <div className="card center">
+          <Section title="Projects">
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search projects..."
+              aria-label="Search projects"
+              type="search"
+            />
+            <label>
+              Featured Only
+              <input
+                type="checkbox"
+                checked={featuredOnly}
+                onChange={(e) => setFeaturedOnly(e.target.checked)}
+              />
+            </label>
+            <div className="projects-grid">
+              {visibleProjects.length > 0
+                ? visibleProjects.map((p) => <ProjectCard key={p.id} {...p} />)
+                : "No Projects Match Query"}
+            </div>
+          </Section>
         </div>
-      </Section>
+      </div>
     </div>
   );
 }

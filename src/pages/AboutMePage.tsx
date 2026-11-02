@@ -3,9 +3,22 @@ import { aboutme } from "../data/aboutme";
 
 function AboutMePage() {
   return (
-    <div className="page">
-      <div className="card center" style={{ whiteSpace: "pre-line" }}>
-        <Section title="About Me">{aboutme.aboutmelong}</Section>
+    <div
+      className="pixel-art"
+      style={{
+        backgroundImage: `url("/elements/MenuBackgroundRedone.png")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        minHeight: "100vh",
+        width: "100%",
+      }}
+    >
+      <div className="page">
+        <div className="card center" style={{ whiteSpace: "pre-line" }}>
+          <Section title="About Me">{aboutme.aboutmelong}</Section>
+        </div>
       </div>
     </div>
   );

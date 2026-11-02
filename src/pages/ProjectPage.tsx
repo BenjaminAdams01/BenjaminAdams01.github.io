@@ -1,13 +1,20 @@
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { projects } from "../data/projects";
 import Tag from "../components/Tag";
 import NotFound from "../components/NotFound";
 import Gallery from "../components/Gallery";
+import Button from "../components/Button";
 
 function ProjectPage() {
   const { id } = useParams();
 
   const project = projects.find((p) => p.id === Number(id));
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/projects");
+  };
 
   if (!project) {
     return <NotFound error="Project Not Found" />;
@@ -15,6 +22,7 @@ function ProjectPage() {
 
   return (
     <div className="page">
+      <Button onClick={handleClick}>Back To Projects</Button>
       <h1>{project.title}</h1>
       <div className="tags">
         {project.tags.map((t) => (

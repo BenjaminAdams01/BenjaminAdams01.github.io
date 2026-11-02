@@ -21,7 +21,7 @@ function ProjectCard({ id, title, description, tags }: Props) {
           alt={`${project?.title} logo`}
           loading="lazy"
         />
-        <h3>{title}</h3>
+        <h3 style={{ paddingTop: 10 }}>{title}</h3>
         <p>{description}</p>
         <div className="tags">
           {tags.map((t) => (

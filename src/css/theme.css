@@ -1,11 +1,11 @@
 :root {
   /* Colors live in variables so you can retheme from one place */
-  --bg: #0f1115;
-  --surface: #1a1d24;
-  --border: #2a2f3a;
+  --bg: #0f1015;
+  --surface: #1a1c24;
+  --border: #2a2e3a;
   --text: #e8eaed;
-  --text-muted: #a0a7b4;
-  --accent: #6aa9ff;
+  --text-muted: rgb(160, 167, 180);
+  --accent: #68a3e7;
   --featured: #ffcc66;
 
   color-scheme: dark;
@@ -22,6 +22,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family:
+    "Rubik",
     system-ui,
     -apple-system,
     "Segoe UI",
@@ -55,6 +56,7 @@ body {
 
 /* Responsive grid: as many 280px+ columns as fit, wrapping on small screens */
 .projects-grid {
+  padding-top: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.25rem;
@@ -72,19 +74,11 @@ body {
     border-color 0.15s ease;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
-
 .screen-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
 }
 
 .center {
