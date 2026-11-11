@@ -36,6 +36,7 @@ function Contributions({ contributions }: Props) {
                   alt={contribution.imageAlt}
                   className="contribution-image"
                 />
+                <p>What I Did:</p>
                 {contribution.points.map((point) => (
                   <ul>{point}</ul>
                 ))}

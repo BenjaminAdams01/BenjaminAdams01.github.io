@@ -34,11 +34,6 @@ function ProjectPage() {
       <p>{project.longDescription}</p>
       <Contributions contributions={project.contributions}></Contributions>
       {project.video && <video src={project.video} controls />}
-      <iframe
-        src="https://www.youtube.com/embed/gURgiWKomqw"
-        title="Game1 trailer"
-        allowFullScreen
-      />
     </div>
   );
 }
