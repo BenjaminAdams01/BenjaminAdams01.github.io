@@ -98,6 +98,10 @@ body {
     border-color 0.15s ease;
 }
 
+.card > :last-child {
+  margin-bottom: 0;
+}
+
 a.project-card {
   display: block;
   color: inherit;
@@ -167,6 +171,7 @@ input[type="checkbox"] {
   object-fit: contain; /* show the whole screenshot, no cropping */
   border-radius: 8px;
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .gallery-thumbs {
@@ -174,6 +179,7 @@ input[type="checkbox"] {
   gap: 0.5rem; /* space between them */
   overflow-x: auto; /* scroll sideways if there are too many to fit */
   padding: 0.25rem 0; /* room for the highlight outline */
+  margin-bottom: 10px;
 }
 
 .gallery-thumb {

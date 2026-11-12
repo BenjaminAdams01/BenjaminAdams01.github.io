@@ -9,7 +9,7 @@ function Section({ title, children }: Props) {
   return (
     <section className="section">
       <h2>{title}</h2>
-      {children}
+      {children && children}
     </section>
   );
 }

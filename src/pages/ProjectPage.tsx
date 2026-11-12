@@ -5,6 +5,7 @@ import NotFound from "../components/NotFound";
 import Gallery from "../components/Gallery";
 import Button from "../components/Button";
 import Contributions from "../components/Contributions";
+import Section from "../components/Section";
 
 function ProjectPage() {
   const { id } = useParams();
@@ -30,8 +31,14 @@ function ProjectPage() {
           <Tag key={t}>{t}</Tag>
         ))}
       </div>
-      <Gallery key={project.id} images={project.screenshots} />
-      <p>{project.longDescription}</p>
+      <div>
+        <Gallery key={project.id} images={project.screenshots} />
+      </div>
+      <div className="card" style={{ whiteSpace: "pre-line" }}>
+        <Section title={`What is ${project.title}?`}>
+          <p>{project.longDescription}</p>
+        </Section>
+      </div>
       <Contributions contributions={project.contributions}></Contributions>
       {project.video && <video src={project.video} controls />}
     </div>
