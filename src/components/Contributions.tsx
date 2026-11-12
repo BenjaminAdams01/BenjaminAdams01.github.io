@@ -20,6 +20,7 @@ function Contributions({ contributions }: Props) {
                 ? "contribution-tab selected"
                 : "contribution-tab"
             }
+            key={contribution.id}
             onClick={() => setSelectedIndex(i)}
           >
             {contribution.label}
@@ -31,15 +32,21 @@ function Contributions({ contributions }: Props) {
           (contribution, i) =>
             i === selectedIndex && (
               <div>
-                <img
-                  src={contribution.image}
-                  alt={contribution.imageAlt}
-                  className="contribution-image"
-                />
+                {contribution.image && (
+                  <img
+                    src={contribution.image}
+                    alt={contribution.imageAlt}
+                    className="contribution-image pixel-art"
+                  />
+                )}
                 <p>What I Did for {contribution.label}:</p>
-                {contribution.points.map((point) => (
-                  <ul>{point}</ul>
-                ))}
+                {contribution.points[0] && (
+                  <ul>
+                    {contribution.points.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                )}
                 <p>{contribution.text}</p>
               </div>
             ),
