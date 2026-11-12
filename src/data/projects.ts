@@ -114,11 +114,40 @@ export const projects: Project[] = [
     title: "Fish Party",
     description: "12 Player Party Game",
     longDescription:
-      "This is a much longer Description for Project 2. It consists of multiple sentences",
+      "Fish Party is a 12-Player Party game where everyone gets to play as fish in an ecosystem. It only takes one button for a player to join and play. So, even if you only have a few controllers, you can have people share a controller and get everyone in the game! The original design was made by Max Totten, and FunRug decided to take the prototype and build a full game out of it.",
     contributions: [
       {
         id: "design",
         label: "Design",
+        points: [
+          "Refined existing fish concepts to fit the new project",
+          "Iterated upon existing Tutorial and Teaching concepts",
+          "Designed possible unlocking systems for the final product",
+          "Researched specific fish species that best fit gameplay concepts",
+        ],
+        text: "Since the original concept for Fish Party already existed before we picked it up to work on, the design work that I have done for Fish Party is mostly on teaching the player and approving concepts from the other designers, Harry Tomasco and Max Totten. I have designed systems that deal with the player experience and polish, including the current Tutorial system.",
+      },
+      {
+        id: "programming",
+        label: "Programming",
+        points: [
+          "Assembled a unique Input System to allow for reliable player control",
+          "Implemented a 12 player joining system with one-button renaming",
+          "Upgraded my Options Menu and Save System from MAGE using Inheritance",
+          "Improved my Button component with DOTween functionality",
+          "Created Rule Tile swapping functionality for building Algae Walls",
+        ],
+        text: "I did a lot more backend programming for Fish Party than I did for MAGE. My job at the start of the project was to make a special input system for the game that just took in every input that the game registered and parse that into a joining system that worked with a player data class to manage players. I also worked on UI programming a lot, creating a really cool menu system.",
+      },
+      {
+        id: "ui",
+        label: "UI/UX",
+        points: [""],
+        text: "",
+      },
+      {
+        id: "art",
+        label: "Pixel Art",
         points: [""],
         text: "",
       },
@@ -140,6 +169,7 @@ export const projects: Project[] = [
       "/projects/MAGE/MageLogoHorizontalHQ.png",
       "/projects/MAGE/MageLogoHorizontalHQ.png",
     ],
+    video: "https://www.youtube.com/embed/Wvt8fark2Hs?si=YedZEm02cCucZfD6",
   },
   {
     id: 3,
