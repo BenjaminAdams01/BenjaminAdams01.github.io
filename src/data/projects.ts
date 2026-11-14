@@ -255,15 +255,49 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "GMTK 2026: Little Cowboy",
-    description: "Top-Down Gunner Roguelike",
+    description: "Top-Down Twin-Stick Roguelike",
     longDescription:
-      "This is a much longer Description for Project 3. It consists of multiple sentences",
+      "Little Cowboy is a mini roguelike twin-stick shooter where each chamber in your revolver can be modified to shoot a unique bullet. The game was made for the 2026 GMTK Game Jam, where we ended with 171 ratings and ranked 653 out of 10,000 entries on enjoyment. I mainly worked on the UI and Level Design for this game.",
     contributions: [
       {
         id: "design",
         label: "Design",
-        points: [""],
-        text: "",
+        points: [
+          "Concepted the original idea for the game",
+          "Built 4 Unique semi-randomly generated levels with scaling difficulty",
+          "Created a simple Tutorial for players to learn safely",
+        ],
+        text: "The level design for Little Cowboy involved the use of a grid-based structure where different level pieces could be slotted in to easily make unique levels. I spent a lot of time in-engine creating a ton of prefabs for the three sizes of level pieces that I decided on. I ended up not sticking strictly to a grid for placing the level pieces, which makes the levels feel a bit more natural.",
+      },
+      {
+        id: "programming",
+        label: "Programming",
+        points: [
+          "Programmed a system to place random level pieces in designated areas",
+          "Implemented damage popups and health pickups",
+          "Co-developed bullet management to work with UI",
+        ],
+        text: "This was a game jam where we did not really have a dedicated artist, so while I was not doing pixel art, I focused on my usual tasks of getting the UI working. I also was in charge of level design, so I programmed that whole system myself. I am pretty proud of the neat level piece idea we used because it is a very innovative way to use tilemaps.",
+      },
+      {
+        id: "ui",
+        label: "UI/UX",
+        points: [
+          "Created a customizable rotating bullet chamber display",
+          "Implemented text explaining each bullet when they appear",
+          "Formed the UI allowing players to swap out their bullets",
+        ],
+        text: "I am really proud of the rotating bullet chamber that I created, mostly because it took me forever to make the bullet items drag and drop properly to their correct locations. I also had to update the backend code with what bullet was placed where and make sure it was aligned to what the UI was displaying.",
+      },
+      {
+        id: "art",
+        label: "Pixel Art",
+        points: [
+          "Created the Little Cowboy character sprite",
+          "Illustrated a dozen tiles to be used in level design",
+          "Created two pieces of cover art for the game",
+        ],
+        text: "This was the first game where I actually used a palette for my art and it felt good to see everything come together. The game ended up much more colorful than if I had just used whatever color I thought would be best. I especially like how the main cover art came out and the logo, while simple, is something I am proud of.",
       },
     ],
     featured: false,
