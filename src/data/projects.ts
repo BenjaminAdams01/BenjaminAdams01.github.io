@@ -192,13 +192,39 @@ export const projects: Project[] = [
     title: "Assist Mode",
     description: "2D Point & Click Puzzle Platformer",
     longDescription:
-      "This is a much longer Description for Project 3. It consists of multiple sentences",
+      "Assist Mode is a single-player puzzle platformer where the player uses keyboard controls to move a platforming character and mouse controls to place platforms. There is a short narrative through a dialog and inspection system. The two characters, Alan and Eve, are set apart in a research facility with Alan’s goal being finding Eve’s location in the facility. Eve assists Alan through a drone which the player controls with the mouse. I made this game for a class project, with the design coming from a previous assignment which I chose to program for the final project.",
     contributions: [
       {
         id: "design",
         label: "Design",
-        points: [""],
-        text: "",
+        points: [
+          "Wrote an extensive Design Document covering all aspects of the game",
+          "Illustrated multiple VDDs to explain various mechanics",
+          "Constructed flowcharts to convey game loops and level maps",
+          "Wrote over a hundred lines of dialog for the narrative",
+          "Created dozens of puzzle screens for the player to solve",
+        ],
+        text: "Since I was the only developer on this project, I was in control of all of the design over the game. I got to write up all of the mechanics and story for the game prior to development as well as find the target audience and define the gameplay experience. Making VDDs was a nice experience and it came together to a nice big document I could show to explain my game. I spent a good amount of personal time developing this game while MAGE was still in early development (before FunRug even existed!).",
+      },
+      {
+        id: "programming",
+        label: "Programming",
+        points: [
+          "Implemented a physics-based 2D character controller",
+          "Invented a system to place gameobjects on a grid and check for blockers",
+          "Optimized rule tiles to batch to save load time",
+        ],
+        text: "Since I also had to program all of the gameplay systems myself, I had to look up a lot and learn how to do a bunch of different things. I learned about UnityEvents here, which later translated to event actions and event buses. That was critical for MAGE’s networking. I also learned that singletons are evil and static classes are beautiful.",
+      },
+      {
+        id: "ui",
+        label: "UI/UX",
+        points: [
+          "Created many onscreen popups to show how to play the game",
+          "Implemented an easily modifiable dialog system for immersive dialog",
+          "Designed an inspection system to let the players discover what they want",
+        ],
+        text: "I struggled a lot with how I should deliver the narrative to the player because my original system of having the player controllable while dialog plays was flawed. Solving puzzles and reading dialog does not work at the same time. I eventually settled on specific cutscenes with a system to let the player click on objects to get dialog. This was important to let players play how they wanted.",
       },
     ],
     featured: true,
