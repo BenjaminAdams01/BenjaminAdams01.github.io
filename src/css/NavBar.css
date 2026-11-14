@@ -1,10 +1,20 @@
 .navbar {
+  position: sticky;
+  top: 0;
   background-color: #252525;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: #333;
+  z-index: 1000; /* Places it above all other elements */
 }
 
 .navbar-brand {
@@ -16,6 +26,7 @@
 .navbar-links {
   display: flex;
   gap: 2rem;
+  margin-right: 1rem;
 }
 
 .nav-link {
