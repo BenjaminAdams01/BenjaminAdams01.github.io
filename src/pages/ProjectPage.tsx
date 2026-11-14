@@ -42,8 +42,7 @@ function ProjectPage() {
       <Contributions contributions={project.contributions}></Contributions>
       {project.video && (
         <iframe
-          width="560"
-          height="315"
+          className="responsive-video"
           src={project.video}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

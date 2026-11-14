@@ -340,3 +340,12 @@ input[type="checkbox"] {
 .contribution li::marker {
   color: var(--accent);
 }
+
+.responsive-video {
+  width: 100%;
+  max-width: 800px; /* Controls how wide the video gets on desktop */
+  aspect-ratio: 16 / 9; /* Automatically scales height proportionally */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Optional: centers the video on the page */
+}
