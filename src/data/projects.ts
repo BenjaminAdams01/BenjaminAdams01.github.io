@@ -365,35 +365,39 @@ export const projects: Project[] = [
     tags: ["Unity", "C#", "Programming", "UI", "Game Jam"],
     thumbnail: "/projects/PerfectPrincess/PerfectPrincessPlan16x9.webp",
     screenshots: [
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
+      "/projects/PerfectPrincess/princess_sc_01.webp",
+      "/projects/PerfectPrincess/princess_sc_02.webp",
+      "/projects/PerfectPrincess/princess_sc_03.webp",
+      "/projects/PerfectPrincess/princess_sc_04.webp",
+      "/projects/PerfectPrincess/princess_sc_05.webp",
+      "/projects/PerfectPrincess/princess_sc_06.webp",
+      "/projects/PerfectPrincess/princess_sc_07.webp",
     ],
   },
   // MARK:- All Lawyers
-  {
-    id: 6,
-    title: "All Lawyers Go To Hell",
-    description: "Narrative Case-building",
-    longDescription:
-      "This is a much longer Description for Project 3. It consists of multiple sentences",
-    contributions: [
-      {
-        id: "design",
-        label: "Design",
-        points: [""],
-        text: "",
-      },
-    ],
-    featured: false,
-    tags: ["Unity", "C#", "Programming", "UI", "Game Jam"],
-    thumbnail: "/projects/AllLawyers/AllLawyers16x9.webp",
-    screenshots: [
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-    ],
-  },
+  // {
+  //   id: 6,
+  //   title: "All Lawyers Go To Hell",
+  //   description: "Narrative Case-building",
+  //   longDescription:
+  //     "This is a much longer Description for Project 3. It consists of multiple sentences",
+  //   contributions: [
+  //     {
+  //       id: "design",
+  //       label: "Design",
+  //       points: [""],
+  //       text: "",
+  //     },
+  //   ],
+  //   featured: false,
+  //   tags: ["Unity", "C#", "Programming", "UI", "Game Jam"],
+  //   thumbnail: "/projects/AllLawyers/AllLawyers16x9.webp",
+  //   screenshots: [
+  //     "/projects/MAGE/MageLogoHorizontalHQ.png",
+  //     "/projects/MAGE/MageLogoHorizontalHQ.png",
+  //     "/projects/MAGE/MageLogoHorizontalHQ.png",
+  //   ],
+  // },
   // MARK:- Tom The Bomb
   {
     id: 7,
@@ -450,33 +454,39 @@ export const projects: Project[] = [
     tags: ["Unity", "C#", "Design", "Programming", "UI", "UX", "Production"],
     thumbnail: "/projects/TomTheBomb/TomTheBomb16x9.webp",
     screenshots: [
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
+      "/projects/TomTheBomb/bomb_sc_01.webp",
+      "/projects/TomTheBomb/bomb_sc_02.webp",
+      "/projects/TomTheBomb/bomb_sc_03.webp",
+      "/projects/TomTheBomb/bomb_sc_04.webp",
+      "/projects/TomTheBomb/bomb_sc_05.webp",
+      "/projects/TomTheBomb/bomb_sc_06.webp",
+      "/projects/TomTheBomb/bomb_sc_07.webp",
+      "/projects/TomTheBomb/bomb_sc_08.webp",
+      "/projects/TomTheBomb/bomb_sc_09.webp",
     ],
   },
   // MARK:- This Website
-  {
-    id: 8,
-    title: "This Website",
-    description: "Meta Project",
-    longDescription:
-      "This is a much longer Description for Project 3. It consists of multiple sentences",
-    contributions: [
-      {
-        id: "design",
-        label: "Design",
-        points: [""],
-        text: "",
-      },
-    ],
-    featured: true,
-    tags: ["React", "JSX", "HTML", "Programming", "UI"],
-    thumbnail: "/projects/MAGE/MageLogoHorizontalHQ.png",
-    screenshots: [
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-    ],
-  },
+  // {
+  //   id: 8,
+  //   title: "This Website",
+  //   description: "Meta Project",
+  //   longDescription:
+  //     "This is a much longer Description for Project 3. It consists of multiple sentences",
+  //   contributions: [
+  //     {
+  //       id: "design",
+  //       label: "Design",
+  //       points: [""],
+  //       text: "",
+  //     },
+  //   ],
+  //   featured: true,
+  //   tags: ["React", "JSX", "HTML", "Programming", "UI"],
+  //   thumbnail: "/projects/MAGE/MageLogoHorizontalHQ.png",
+  //   screenshots: [
+  //     "/projects/MAGE/MageLogoHorizontalHQ.png",
+  //     "/projects/MAGE/MageLogoHorizontalHQ.png",
+  //     "/projects/MAGE/MageLogoHorizontalHQ.png",
+  //   ],
+  // },
 ];
