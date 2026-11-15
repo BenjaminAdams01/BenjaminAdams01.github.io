@@ -21,6 +21,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  // MARK:- MAGE
   {
     id: 1,
     title: "MAGE",
@@ -113,6 +114,7 @@ export const projects: Project[] = [
     ],
     video: "https://www.youtube.com/embed/gURgiWKomqw",
   },
+  // MARK:- Fish Party
   {
     id: 2,
     title: "Fish Party",
@@ -181,12 +183,16 @@ export const projects: Project[] = [
     ],
     thumbnail: "/projects/FishParty/FishParty16x9.webp",
     screenshots: [
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
+      "/projects/FishParty/fish_sc_01.webp",
+      "/projects/FishParty/fish_sc_02.webp",
+      "/projects/FishParty/fish_sc_03.webp",
+      "/projects/FishParty/fish_sc_04.webp",
+      "/projects/FishParty/fish_sc_05.webp",
+      "/projects/FishParty/fish_sc_06.webp",
     ],
     video: "https://www.youtube.com/embed/Wvt8fark2Hs?si=YedZEm02cCucZfD6",
   },
+  // MARK:- Assist Mode
   {
     id: 3,
     title: "Assist Mode",
@@ -241,17 +247,19 @@ export const projects: Project[] = [
     ],
     thumbnail: "/projects/AssistMode/AssistMode16x9.webp",
     screenshots: [
-      "/projects/MAGE/mage_sc_01.webp",
-      "/projects/MAGE/mage_sc_02.webp",
-      "/projects/MAGE/mage_sc_03.webp",
-      "/projects/MAGE/mage_sc_04.webp",
-      "/projects/MAGE/mage_sc_05.webp",
-      "/projects/MAGE/mage_sc_06.webp",
-      "/projects/MAGE/mage_sc_07.webp",
-      "/projects/MAGE/mage_sc_08.webp",
-      "/projects/MAGE/mage_sc_09.webp",
+      "/projects/AssistMode/assist_sc_01.webp",
+      "/projects/AssistMode/assist_sc_02.webp",
+      "/projects/AssistMode/assist_sc_03.webp",
+      "/projects/AssistMode/assist_sc_04.webp",
+      "/projects/AssistMode/assist_sc_05.webp",
+      "/projects/AssistMode/assist_sc_06.webp",
+      "/projects/AssistMode/assist_sc_07.webp",
+      "/projects/AssistMode/assist_sc_08.webp",
+      "/projects/AssistMode/assist_sc_09.webp",
+      "/projects/AssistMode/assist_sc_10.webp",
     ],
   },
+  // MARK:- Little Cowboy
   {
     id: 4,
     title: "GMTK 2026: Little Cowboy",
@@ -313,23 +321,44 @@ export const projects: Project[] = [
     ],
     thumbnail: "/projects/LittleCowboy/LittleCowboy16x9.webp",
     screenshots: [
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
-      "/projects/MAGE/MageLogoHorizontalHQ.png",
+      "/projects/LittleCowboy/cowboy_sc_01.webp",
+      "/projects/LittleCowboy/cowboy_sc_02.webp",
+      "/projects/LittleCowboy/cowboy_sc_03.webp",
+      "/projects/LittleCowboy/cowboy_sc_04.webp",
+      "/projects/LittleCowboy/cowboy_sc_05.webp",
+      "/projects/LittleCowboy/cowboy_sc_06.webp",
+      "/projects/LittleCowboy/cowboy_sc_07.webp",
+      "/projects/LittleCowboy/cowboy_sc_08.webp",
+      "/projects/LittleCowboy/cowboy_sc_09.webp",
     ],
   },
+  // MARK:- Perfect Princess
   {
     id: 5,
     title: "Perfect Princess Plan",
     description: "Grid-based Puzzle Game",
     longDescription:
-      "This is a much longer Description for Project 3. It consists of multiple sentences",
+      "Perfect Princess Plan is a singleplayer puzzle game where you must help a princess perform perfect pathing to her prince. The central mechanic revolves around dragging masks to dummies to set up a turn-based conveyor-like sequence. This game was made in 48 hours for the Global Game Jam 2026. You can play a version of the game on itch.io today! Just be warned: the puzzles get pretty preposterous!",
     contributions: [
       {
-        id: "design",
-        label: "Design",
-        points: [""],
-        text: "",
+        id: "programming",
+        label: "Programming",
+        points: [
+          "Programmed a data system to save and unlock levels",
+          "Worked with imported art assets to apply them to gameobjects",
+          "Modified gameplay code to be flexible with art assets",
+        ],
+        text: "I mostly worked on programming the UI and getting the different levels to load. I made an entire system for translating button clicks to load specific scenes based on unlock data. We ran into a lot of build issues at the end, which we managed to fix a bit after the deadline.",
+      },
+      {
+        id: "ui",
+        label: "UI/UX",
+        points: [
+          "Implemented mask dragging from canvas to world sprites",
+          "Created smooth transitions between levels with a curtain wipe",
+          "Designed a map menu for choosing which levels to play",
+        ],
+        text: "The UI for this game ended up being pretty troublesome, as we had to resize the game space using a camera to render the grid spaces at a larger size. This meant that dragging the masks onto the pieces had to go through a render texture to work. Hopefully we never design a game to block ourselves like this again!",
       },
     ],
     featured: false,
@@ -341,6 +370,7 @@ export const projects: Project[] = [
       "/projects/MAGE/MageLogoHorizontalHQ.png",
     ],
   },
+  // MARK:- All Lawyers
   {
     id: 6,
     title: "All Lawyers Go To Hell",
@@ -364,22 +394,60 @@ export const projects: Project[] = [
       "/projects/MAGE/MageLogoHorizontalHQ.png",
     ],
   },
+  // MARK:- Tom The Bomb
   {
     id: 7,
     title: "Tom the Bomb Gets a Haircut",
     description: "Sidescrolling Speedrun Platformer",
     longDescription:
-      "This is a much longer Description for Project 3. It consists of multiple sentences",
+      "Tom the Bomb Gets a Haircut is a 2D sidescrolling speedrun platformer where you play as a bomb with a lit fuse. The game includes a tutorial and three unique levels to play. This game was made as a class project in my Sophomore year. We were a team of 4 developers, with me as the designer. You can play the game on itch.io today!",
     contributions: [
       {
         id: "design",
         label: "Design",
-        points: [""],
-        text: "",
+        points: [
+          "Produced an extensive design document covering Game Direction, Target Audience, and all Gameplay Systems",
+          "Illustrated a full VDD displaying how all mechanics should function",
+          "Built multiple levels balanced around player skill and a limited timer",
+          "Adjusted game feel based on playtester feedback",
+        ],
+        text: "This is the first project where I made a GDD designed for a team to reference and read. I made sure to include my visual diagrams in the document itself so it was clearer what the programmer and artist should be doing their work based on. It ended up being pretty helpful to the team, based on the feedback that they gave me.",
+      },
+      {
+        id: "programming",
+        label: "Programming",
+        points: [
+          "Implemented a simple scene loading system",
+          "Created a vertical parallax ocean background",
+          "Optimized collision detection for player collision with crates",
+          "Implemented peer-made art assets and sound assets",
+        ],
+        text: "My job for this project was not actually to be a programmer, but there are a lot of things I can do that can give time to a dedicated programmer. Most of my programming work was fixing bugs and adding polish.",
+      },
+      {
+        id: "ui",
+        label: "UI/UX",
+        points: [
+          "Implemented dynamic timer UI and a game over screen",
+          "Created a simple Tutorial showcasing each of our mechanics",
+          "Added effects for running out of time and breaking crates",
+          "Built a rope as the fuse to follow the player character",
+        ],
+        text: "This was a relatively small project and it was not very UI heavy, so I focused more and got some polish in as well as cleaning up some art assets. I could not split my time so thin so I made some simple UI and worked on making more levels for the player to play through.",
+      },
+      {
+        id: "production",
+        label: "Production",
+        points: [
+          "Produced weekly slideshows to present in front of my peers",
+          "Held weekly sprint meetings with my team to address workload and scope",
+          "Managed tasks in Jira and configured our Confluence tree",
+        ],
+        text: "I am not a dedicated producer but we did not have one for this project so I made sure that we had the organization that we needed. I spent a lot of time gathering gifs for our slideshows so that our peers could see the progress that we were making. I found it kind of useful as a designer to be forced to explain our game to people who were unaware.",
       },
     ],
     featured: false,
-    tags: ["Unity", "C#", "Programming", "UI", "UX", "Production"],
+    tags: ["Unity", "C#", "Design", "Programming", "UI", "UX", "Production"],
     thumbnail: "/projects/TomTheBomb/TomTheBomb16x9.webp",
     screenshots: [
       "/projects/MAGE/MageLogoHorizontalHQ.png",
@@ -387,6 +455,7 @@ export const projects: Project[] = [
       "/projects/MAGE/MageLogoHorizontalHQ.png",
     ],
   },
+  // MARK:- This Website
   {
     id: 8,
     title: "This Website",
