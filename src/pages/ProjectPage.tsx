@@ -1,4 +1,4 @@
-import { Link, useNavigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { projects } from "../data/projects";
 import Tag from "../components/Tag/Tag";
 import NotFound from "../components/NotFound";
