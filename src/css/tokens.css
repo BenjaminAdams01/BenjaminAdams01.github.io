@@ -1,0 +1,12 @@
+:root {
+  --bg: #14161f;
+  --footer: #090a14;
+  --surface: #1b1a24;
+  --border: #2c2a3a;
+  --text: #e8eaed;
+  --text-muted: rgb(181, 183, 199);
+  --accent: #4c84eb;
+  --featured: #ffcc66;
+
+  color-scheme: dark;
+}

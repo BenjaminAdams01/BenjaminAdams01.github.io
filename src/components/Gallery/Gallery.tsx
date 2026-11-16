@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Gallery.css";
 
 function Gallery({ images }: { images: string[] }) {
   const [selectedIndex, setSelectedIndex] = useState(0);

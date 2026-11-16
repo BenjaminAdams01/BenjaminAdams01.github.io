@@ -1,0 +1,15 @@
+.btn-accent {
+  --bs-btn-color: var(--bg);
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+
+  --bs-btn-hover-color: var(--bg);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--accent) 85%, white);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--accent) 85%, white);
+
+  --bs-btn-active-color: var(--bg);
+  --bs-btn-active-bg: color-mix(in srgb, var(--accent) 80%, black);
+  --bs-btn-active-border-color: color-mix(in srgb, var(--accent) 80%, black);
+
+  --bs-btn-focus-shadow-rgb: 104, 163, 231;
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Contribution } from "../data/projects";
+import { Contribution } from "../../data/projects";
+import "./Contributions.css";
 
 interface Props {
   contributions: Contribution[];

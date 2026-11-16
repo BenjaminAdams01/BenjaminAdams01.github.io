@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import "./Tag.css";
 
 interface Props {
   children: ReactNode;

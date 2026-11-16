@@ -9,7 +9,7 @@ import ProjectPage from "./pages/ProjectPage";
 import NotFound from "./components/NotFound";
 import ProjectCardsPage from "./pages/ProjectCardsPage";
 import AboutMePage from "./pages/AboutMePage";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 
 function RootLayout() {
   return (

@@ -1,0 +1,72 @@
+.banner {
+  background-image: url("/elements/MenuBackgroundRedone.png");
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.banner p {
+  margin: 0;
+  font-size: 30px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--footer);
+  background-position: center;
+  image-rendering: pixelated;
+  min-height: 30dvh;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 10px;
+  border-color: var(--border);
+  background-color: var(--surface);
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: var(--text);
+}
+
+.projects-grid {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.projects-searchbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.projects-search {
+  margin-left: auto;
+  padding: 0.1rem 0.2rem;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}

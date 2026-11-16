@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import "./Button.css";
 
 interface Props {
   children: ReactNode;
@@ -8,9 +9,9 @@ interface Props {
 
 const Button = ({ children, color = "primary", onClick }: Props) => {
   return (
-    <div className={"btn btn-" + color} onClick={onClick}>
+    <button type="button" className={"btn btn-" + color} onClick={onClick}>
       {children}
-    </div>
+    </button>
   );
 };
 

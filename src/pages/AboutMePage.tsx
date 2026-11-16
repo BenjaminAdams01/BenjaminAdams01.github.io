@@ -1,4 +1,4 @@
-import Section from "../components/Section";
+import Section from "../components/Section/Section";
 import { aboutme } from "../data/aboutme";
 
 function AboutMePage() {
@@ -16,8 +16,14 @@ function AboutMePage() {
       }}
     >
       <div className="page">
-        <div className="card center" style={{ whiteSpace: "pre-line" }}>
-          <Section title="About Me">{aboutme.aboutmelong}</Section>
+        <div className="card center">
+          <Section title="About Me">
+            <p>
+              {aboutme.aboutmelong.map((p) => (
+                <p>{p}</p>
+              ))}
+            </p>
+          </Section>
         </div>
       </div>
     </div>

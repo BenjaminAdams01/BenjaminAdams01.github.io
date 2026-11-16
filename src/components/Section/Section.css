@@ -1,0 +1,7 @@
+.section h2 {
+  color: var(--text);
+}
+
+.section p {
+  color: var(--text-muted);
+}

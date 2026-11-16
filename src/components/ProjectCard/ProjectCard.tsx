@@ -1,6 +1,7 @@
 import { Link } from "react-router";
-import Tag from "./Tag";
-import { projects } from "../data/projects";
+import Tag from "../Tag/Tag";
+import { projects } from "../../data/projects";
+import "./ProjectCard.css";
 
 interface Props {
   id: number;

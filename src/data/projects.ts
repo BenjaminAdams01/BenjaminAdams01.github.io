@@ -352,7 +352,7 @@ export const projects: Project[] = [
       },
       {
         id: "ui",
-        label: "UI/UX",
+        label: "UI",
         points: [
           "Implemented mask dragging from canvas to world sprites",
           "Created smooth transitions between levels with a curtain wipe",
