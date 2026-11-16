@@ -7,6 +7,7 @@ import Button from "../components/Button/Button";
 import Contributions from "../components/Contributions/Contributions";
 import Section from "../components/Section/Section";
 import Footer from "../components/Footer/Footer";
+import Banner from "../components/Banner/Banner";
 
 function ProjectPage() {
   const { id } = useParams();
@@ -31,11 +32,11 @@ function ProjectPage() {
 
   return (
     <div>
-      <div className="page">
-        <Button color="accent" onClick={handleClick}>
-          Back To Projects
-        </Button>
-        <h1 className="center">{project.title}</h1>
+      <Banner
+        logoPath={project.logoPath}
+        imagePath={project.logoBackgroundPath}
+      />
+      <div className="page" style={{ paddingTop: 10 }}>
         <div className="tags center">
           {project.tags.map((t) => (
             <Tag key={t}>{t}</Tag>
@@ -67,13 +68,18 @@ function ProjectPage() {
             allowFullScreen
           ></iframe>
         )}
-        {next && (
-          <div className="right padded">
-            <Button color="accent" onClick={handleClickNext}>
-              See Next: {next.title}
-            </Button>
-          </div>
-        )}
+        <div className="bottom-buttons padded">
+          <Button color="accent" onClick={handleClick}>
+            Back To Projects
+          </Button>
+          {next && (
+            <div className="bottom-right-button">
+              <Button color="accent" onClick={handleClickNext}>
+                See Next: {next.title}
+              </Button>
+            </div>
+          )}
+        </div>
       </div>
       <Footer />
     </div>

@@ -10,6 +10,8 @@ export interface Contribution {
 export interface Project {
   id: number;
   title: string;
+  logoPath?: string;
+  logoBackgroundPath: string;
   description: string;
   longDescription: string;
   linkPath?: string;
@@ -30,6 +32,8 @@ export const projects: Project[] = [
     description: "Magic 2D Projectile Fighter",
     longDescription:
       "MAGE: Mega Awesome Gregarious Encounters is an action-packed 2D projectile fighter. You can unlock and play 21 different Mages, each with their own unique mechanics. There are 10 different levels, each with 20 layouts, totalling to 200 completely unique playing fields.\nMAGE started as a fun concept with super basic mechanics in 2024. In 2025, Alex Weiswasser, Harry Tomasco, Max Totten, and I founded FunRug Studio and in 2026 we released MAGE onto Steam. I was super proud of being able to release a finished product onto Steam, and I learned so much from working on it for two years.",
+    logoPath: "/projects/MAGE/mage_logo.webp",
+    logoBackgroundPath: "/projects/MAGE/mage_bg.webp",
     linkPath:
       "https://store.steampowered.com/app/4459080/MAGE_Mega_Awesome_Gregarious_Encounters/",
     linkText: "Link to Steam Store Page",
@@ -126,6 +130,8 @@ export const projects: Project[] = [
     description: "12 Player Party Game",
     longDescription:
       "Fish Party is a 12-Player Party game where everyone gets to play as fish in an ecosystem. It only takes one button for a player to join and play. So, even if you only have a few controllers, you can have people share a controller and get everyone in the game! The original design was made by Max Totten, and FunRug decided to take the prototype and build a full game out of it.",
+    logoPath: "/projects/FishParty/fish_logo.webp",
+    logoBackgroundPath: "/projects/FishParty/fish_bg.webp",
     linkPath: "https://store.steampowered.com/app/5170080/Fish_Party/",
     linkText: "Link to Steam Store Page",
     contributions: [
@@ -204,6 +210,8 @@ export const projects: Project[] = [
     id: 3,
     title: "Assist Mode",
     description: "2D Point & Click Puzzle Platformer",
+    logoPath: "/projects/AssistMode/assist_logo.webp",
+    logoBackgroundPath: "/projects/AssistMode/assist_bg.webp",
     longDescription:
       "Assist Mode is a single-player puzzle platformer where the player uses keyboard controls to move a platforming character and mouse controls to place platforms. There is a short narrative through a dialog and inspection system. The two characters, Alan and Eve, are set apart in a research facility with Alan’s goal being finding Eve’s location in the facility. Eve assists Alan through a drone which the player controls with the mouse. I made this game for a class project, with the design coming from a previous assignment which I chose to program for the final project.",
     linkPath: "https://arfy25.itch.io/assist-mode",
@@ -275,6 +283,8 @@ export const projects: Project[] = [
     description: "Top-Down Twin-Stick Roguelike",
     longDescription:
       "Little Cowboy is a mini roguelike twin-stick shooter where each chamber in your revolver can be modified to shoot a unique bullet. The game was made for the 2026 GMTK Game Jam, where we ended with 171 ratings and ranked 653 out of 10,000 entries on enjoyment. I mainly worked on the UI and Level Design for this game.",
+    logoPath: "/projects/LittleCowboy/cowboy_logo.webp",
+    logoBackgroundPath: "/projects/LittleCowboy/cowboy_bg.webp",
     linkPath: "https://funrug-studio.itch.io/little-cowboy",
     linkText: "Link to Itch Page",
     contributions: [
@@ -350,6 +360,8 @@ export const projects: Project[] = [
     description: "Grid-based Puzzle Game",
     longDescription:
       "Perfect Princess Plan is a singleplayer puzzle game where you must help a princess perform perfect pathing to her prince. The central mechanic revolves around dragging masks to dummies to set up a turn-based conveyor-like sequence. This game was made in 48 hours for the Global Game Jam 2026. You can play a version of the game on itch.io today! Just be warned: the puzzles get pretty preposterous!",
+    logoPath: "/projects/PerfectPrincess/princess_logo.webp",
+    logoBackgroundPath: "/projects/PerfectPrincess/princess_bg.webp",
     linkPath: "https://funrug-studio.itch.io/perfect-princess-plan",
     linkText: "Link to Itch Page",
     contributions: [
@@ -418,6 +430,8 @@ export const projects: Project[] = [
     description: "Sidescrolling Speedrun Platformer",
     longDescription:
       "Tom the Bomb Gets a Haircut is a 2D sidescrolling speedrun platformer where you play as a bomb with a lit fuse. The game includes a tutorial and three unique levels to play. This game was made as a class project in my Sophomore year. We were a team of 4 developers, with me as the designer. You can play the game on itch.io today!",
+    logoPath: "/projects/TomTheBomb/bomb_logo.webp",
+    logoBackgroundPath: "/projects/TomTheBomb/bomb_bg.webp",
     linkPath: "https://arfy25.itch.io/tom-the-bomb",
     linkText: "Link to Itch Page",
     contributions: [
