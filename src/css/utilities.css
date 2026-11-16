@@ -4,6 +4,17 @@
   align-items: center;
 }
 
+.right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.padded {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
 .center-column {
   display: flex;
   flex-direction: column;
