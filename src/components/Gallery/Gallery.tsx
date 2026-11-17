@@ -1,10 +1,16 @@
 import { useState } from "react";
 import "./Gallery.css";
 
-function Gallery({ images }: { images: string[] }) {
+export type MediaItem =
+  | { type: "image"; src: string; alt: string }
+  | { type: "video"; src: string; poster: string };
+
+function Gallery({ items }: { items: MediaItem[] }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  if (images.length === 0) return null;
+  if (items.length === 0) return null;
+
+  const current = items[selectedIndex];
 
   return (
     <div className="gallery">
@@ -13,41 +19,53 @@ function Gallery({ images }: { images: string[] }) {
           className="gallery-nav"
           onClick={() =>
             setSelectedIndex((prev) =>
-              prev === 0 ? images.length - 1 : prev - 1,
+              prev === 0 ? items.length - 1 : prev - 1,
             )
           }
           aria-label="Previous screenshot"
         >
           {"<"}
         </button>
-        <img
-          className="gallery-main pixel-art"
-          src={images[selectedIndex]}
-          alt={`Screenshot ${selectedIndex + 1} of ${images.length}`}
-        />
+        {current.type === "video" ? (
+          <video
+            className="gallery-main"
+            src={current.src}
+            poster={current.poster}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          <img className="gallery-main" src={current.src} alt={current.alt} />
+        )}
         <button
           className="gallery-nav"
-          onClick={() => setSelectedIndex((prev) => (prev + 1) % images.length)}
+          onClick={() => setSelectedIndex((prev) => (prev + 1) % items.length)}
           aria-label="Next screenshot"
         >
           {">"}
         </button>
       </div>
       <div className="gallery-thumbs">
-        {images.map((src, i) => (
+        {items.map((src, i) => (
           <button
-            key={src}
+            key={i}
             className={
               i === selectedIndex ? "gallery-thumb selected" : "gallery-thumb"
             }
             onClick={() => setSelectedIndex(i)}
           >
-            <img
-              className="pixel-art"
-              src={src}
-              alt={`Screenshot ${i + 1}`}
-              loading="lazy"
-            />
+            {src.type === "video" ? (
+              <img
+                className="pixel-art"
+                src={src.poster}
+                alt={`Video`}
+                loading="lazy"
+              />
+            ) : (
+              <img className="pixel-art" src={src.src} alt={src.alt} />
+            )}
           </button>
         ))}
       </div>

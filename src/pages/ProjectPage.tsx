@@ -53,7 +53,7 @@ function ProjectPage() {
           </a>
         )}
         <div>
-          <Gallery key={project.id} images={project.screenshots} />
+          <Gallery key={project.id} items={project.media} />
         </div>
         <Section title={`What is ${project.title}?`}>
           <p>{project.longDescription}</p>

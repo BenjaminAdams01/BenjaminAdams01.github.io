@@ -1,3 +1,5 @@
+import { MediaItem } from "../components/Gallery/Gallery";
+
 export interface Contribution {
   id: string;
   label: string;
@@ -20,7 +22,7 @@ export interface Project {
   featured: boolean;
   tags: string[];
   thumbnail: string;
-  screenshots: string[];
+  media: MediaItem[];
   video?: string;
 }
 
@@ -110,16 +112,57 @@ export const projects: Project[] = [
       "Shipped",
     ],
     thumbnail: "/projects/MAGE/MAGE16x9.webp",
-    screenshots: [
-      "/projects/MAGE/mage_sc_01.webp",
-      "/projects/MAGE/mage_sc_02.webp",
-      "/projects/MAGE/mage_sc_03.webp",
-      "/projects/MAGE/mage_sc_04.webp",
-      "/projects/MAGE/mage_sc_05.webp",
-      "/projects/MAGE/mage_sc_06.webp",
-      "/projects/MAGE/mage_sc_07.webp",
-      "/projects/MAGE/mage_sc_08.webp",
-      "/projects/MAGE/mage_sc_09.webp",
+    media: [
+      {
+        type: "video",
+        src: "/projects/MAGE/mage_video.mp4",
+        poster: "/projects/MAGE/mage_video_poster.webp",
+      },
+      {
+        type: "image",
+        src: "/projects/MAGE/mage_sc_01.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/MAGE/mage_sc_02.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/MAGE/mage_sc_03.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/MAGE/mage_sc_04.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/MAGE/mage_sc_05.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/MAGE/mage_sc_06.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/MAGE/mage_sc_07.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/MAGE/mage_sc_08.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/MAGE/mage_sc_09.webp",
+        alt: "Screenshot",
+      },
     ],
     video: "https://www.youtube.com/embed/gURgiWKomqw",
   },
@@ -195,19 +238,136 @@ export const projects: Project[] = [
       "Accessibility",
     ],
     thumbnail: "/projects/FishParty/FishParty16x9.webp",
-    screenshots: [
-      "/projects/FishParty/fish_sc_01.webp",
-      "/projects/FishParty/fish_sc_02.webp",
-      "/projects/FishParty/fish_sc_03.webp",
-      "/projects/FishParty/fish_sc_04.webp",
-      "/projects/FishParty/fish_sc_05.webp",
-      "/projects/FishParty/fish_sc_06.webp",
+    media: [
+      {
+        type: "video",
+        src: "/projects/FishParty/fish_video.mp4",
+        poster: "/projects/FishParty/fish_video_poster.webp",
+      },
+      {
+        type: "image",
+        src: "/projects/FishParty/fish_sc_01.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/FishParty/fish_sc_02.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/FishParty/fish_sc_03.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/FishParty/fish_sc_04.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/FishParty/fish_sc_05.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/FishParty/fish_sc_06.webp",
+        alt: "Screenshot",
+      },
     ],
     video: "https://www.youtube.com/embed/Wvt8fark2Hs?si=YedZEm02cCucZfD6",
   },
-  // MARK:- Assist Mode
+  // MARK:- Lighthouse Time Machine
   {
     id: 3,
+    title: "Lighthouse Time Machine",
+    description: "2D Action Arcade Game",
+    logoPath: "/projects/Lighthouse/lighthouse_logo.webp",
+    logoBackgroundPath: "/projects/Lighthouse/lighthouse_bg.webp",
+    longDescription:
+      "Lighthouse Time Machine is a top-down 2D action arcade game where you control a lighthouse trying to direct ships to their ports. You can only see ships inside your lighthouse beam so stopping collisions becomes a lot more difficult. For this game, I worked with the other 3 members of FunRug Studio in addition to one of my peers, Matthew O’ Neill. This game was made for the 24 hour long 2026 Wolfjam and we placed in 2nd. Check it out on itch.io!",
+    linkPath: "https://funrug-studio.itch.io/lighthouse-game",
+    linkText: "Link to Itch Page",
+    contributions: [
+      {
+        id: "programming",
+        label: "Programming",
+        points: [
+          "Created dynamic fog using layers and sprite masking",
+          "Implemented visuals for directing boats",
+          "Programmed smooth value score tracking",
+        ],
+        text: "I was in charge of technical art as well as my traditional pixel art so I created the special fog layer that the game uses to hide the boats. I had been wanting to use sprite masking in one of our main projects so I am glad I finally got to. ",
+      },
+      {
+        id: "ui",
+        label: "UI/UX",
+        points: [
+          "Created an Interactive Tutorial for dragging boats",
+          "Designed score and health UI to avoid blocking game space",
+          "Completed game loop with final score screen and pause menu",
+        ],
+        text: "Since this game is all about what you can and cannot see, I thought a bit about what information the player should know in terms of UI. I decided that it was important for the player to know when they lost health/reputation because otherwise the player might lose without knowing what they were doing wrong. The score as well is important to show to give the player stakes, since the game gets harder as time goes on.",
+      },
+      {
+        id: "art",
+        label: "Pixel Art",
+        points: [
+          "Illustrated a full ocean game space with 4 unique islands",
+          "Created the cover art for the game",
+        ],
+        text: "This was another game jam where we did not have a dedicated artist so I worked on environmental art for the game. I got the layout for the map from the other designers and then spent a few hours drawing it to be fully polished. I also spent the last few hours creating good-looking cover art and logo for the game.",
+      },
+    ],
+    featured: true,
+    tags: ["Unity", "C#", "Programming", "Pixel Art", "UI", "UX", "Game Jam"],
+    thumbnail: "/projects/Lighthouse/Lighthouse16x9.webp",
+    media: [
+      {
+        type: "video",
+        src: "/projects/Lighthouse/lighthouse_video.mp4",
+        poster: "/projects/Lighthouse/lighthouse_video_poster.webp",
+      },
+      {
+        type: "image",
+        src: "/projects/Lighthouse/lighthouse_sc_01.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/Lighthouse/lighthouse_sc_02.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/Lighthouse/lighthouse_sc_03.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/Lighthouse/lighthouse_sc_04.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/Lighthouse/lighthouse_sc_05.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/Lighthouse/lighthouse_sc_06.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/Lighthouse/lighthouse_sc_07.webp",
+        alt: "Screenshot",
+      },
+    ],
+  },
+  // MARK:- Assist Mode
+  {
+    id: 4,
     title: "Assist Mode",
     description: "2D Point & Click Puzzle Platformer",
     logoPath: "/projects/AssistMode/assist_logo.webp",
@@ -263,23 +423,68 @@ export const projects: Project[] = [
       "Solo",
     ],
     thumbnail: "/projects/AssistMode/AssistMode16x9.webp",
-    screenshots: [
-      "/projects/AssistMode/assist_sc_01.webp",
-      "/projects/AssistMode/assist_sc_02.webp",
-      "/projects/AssistMode/assist_sc_03.webp",
-      "/projects/AssistMode/assist_sc_04.webp",
-      "/projects/AssistMode/assist_sc_05.webp",
-      "/projects/AssistMode/assist_sc_06.webp",
-      "/projects/AssistMode/assist_sc_07.webp",
-      "/projects/AssistMode/assist_sc_08.webp",
-      "/projects/AssistMode/assist_sc_09.webp",
-      "/projects/AssistMode/assist_sc_10.webp",
+    media: [
+      {
+        type: "video",
+        src: "/projects/AssistMode/assist_video.mp4",
+        poster: "/projects/AssistMode/assist_video_poster.webp",
+      },
+      {
+        type: "image",
+        src: "/projects/AssistMode/assist_sc_01.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/AssistMode/assist_sc_02.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/AssistMode/assist_sc_03.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/AssistMode/assist_sc_04.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/AssistMode/assist_sc_05.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/AssistMode/assist_sc_06.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/AssistMode/assist_sc_07.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/AssistMode/assist_sc_08.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/AssistMode/assist_sc_09.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/AssistMode/assist_sc_10.webp",
+        alt: "Screenshot",
+      },
     ],
   },
   // MARK:- Little Cowboy
   {
-    id: 4,
-    title: "GMTK 2026: Little Cowboy",
+    id: 5,
+    title: "Little Cowboy",
     description: "Top-Down Twin-Stick Roguelike",
     longDescription:
       "Little Cowboy is a mini roguelike twin-stick shooter where each chamber in your revolver can be modified to shoot a unique bullet. The game was made for the 2026 GMTK Game Jam, where we ended with 171 ratings and ranked 653 out of 10,000 entries on enjoyment. I mainly worked on the UI and Level Design for this game.",
@@ -341,21 +546,62 @@ export const projects: Project[] = [
       "Game Jam",
     ],
     thumbnail: "/projects/LittleCowboy/LittleCowboy16x9.webp",
-    screenshots: [
-      "/projects/LittleCowboy/cowboy_sc_01.webp",
-      "/projects/LittleCowboy/cowboy_sc_02.webp",
-      "/projects/LittleCowboy/cowboy_sc_03.webp",
-      "/projects/LittleCowboy/cowboy_sc_04.webp",
-      "/projects/LittleCowboy/cowboy_sc_05.webp",
-      "/projects/LittleCowboy/cowboy_sc_06.webp",
-      "/projects/LittleCowboy/cowboy_sc_07.webp",
-      "/projects/LittleCowboy/cowboy_sc_08.webp",
-      "/projects/LittleCowboy/cowboy_sc_09.webp",
+    media: [
+      {
+        type: "video",
+        src: "/projects/LittleCowboy/cowboy_video.mp4",
+        poster: "/projects/LittleCowboy/cowboy_video_poster.webp",
+      },
+      {
+        type: "image",
+        src: "/projects/LittleCowboy/cowboy_sc_01.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/LittleCowboy/cowboy_sc_02.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/LittleCowboy/cowboy_sc_03.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/LittleCowboy/cowboy_sc_04.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/LittleCowboy/cowboy_sc_05.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/LittleCowboy/cowboy_sc_06.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/LittleCowboy/cowboy_sc_07.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/LittleCowboy/cowboy_sc_08.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/LittleCowboy/cowboy_sc_09.webp",
+        alt: "Screenshot",
+      },
     ],
   },
   // MARK:- Perfect Princess
   {
-    id: 5,
+    id: 6,
     title: "Perfect Princess Plan",
     description: "Grid-based Puzzle Game",
     longDescription:
@@ -389,43 +635,52 @@ export const projects: Project[] = [
     featured: false,
     tags: ["Unity", "C#", "Programming", "UI", "Game Jam"],
     thumbnail: "/projects/PerfectPrincess/PerfectPrincessPlan16x9.webp",
-    screenshots: [
-      "/projects/PerfectPrincess/princess_sc_01.webp",
-      "/projects/PerfectPrincess/princess_sc_02.webp",
-      "/projects/PerfectPrincess/princess_sc_03.webp",
-      "/projects/PerfectPrincess/princess_sc_04.webp",
-      "/projects/PerfectPrincess/princess_sc_05.webp",
-      "/projects/PerfectPrincess/princess_sc_06.webp",
-      "/projects/PerfectPrincess/princess_sc_07.webp",
+    media: [
+      {
+        type: "video",
+        src: "/projects/PerfectPrincess/princess_video.mp4",
+        poster: "/projects/PerfectPrincess/princess_video_poster.webp",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_01.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_02.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_03.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_04.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_05.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_06.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_07.webp",
+        alt: "Screenshot",
+      },
     ],
   },
-  // MARK:- All Lawyers
-  // {
-  //   id: 6,
-  //   title: "All Lawyers Go To Hell",
-  //   description: "Narrative Case-building",
-  //   longDescription:
-  //     "This is a much longer Description for Project 3. It consists of multiple sentences",
-  //   contributions: [
-  //     {
-  //       id: "design",
-  //       label: "Design",
-  //       points: [""],
-  //       text: "",
-  //     },
-  //   ],
-  //   featured: false,
-  //   tags: ["Unity", "C#", "Programming", "UI", "Game Jam"],
-  //   thumbnail: "/projects/AllLawyers/AllLawyers16x9.webp",
-  //   screenshots: [
-  //     "/projects/MAGE/MageLogoHorizontalHQ.png",
-  //     "/projects/MAGE/MageLogoHorizontalHQ.png",
-  //     "/projects/MAGE/MageLogoHorizontalHQ.png",
-  //   ],
-  // },
   // MARK:- Tom The Bomb
   {
-    id: 6,
+    id: 7,
     title: "Tom the Bomb Gets a Haircut",
     description: "Sidescrolling Speedrun Platformer",
     longDescription:
@@ -482,16 +737,57 @@ export const projects: Project[] = [
     featured: false,
     tags: ["Unity", "C#", "Design", "Programming", "UI", "UX", "Production"],
     thumbnail: "/projects/TomTheBomb/TomTheBomb16x9.webp",
-    screenshots: [
-      "/projects/TomTheBomb/bomb_sc_01.webp",
-      "/projects/TomTheBomb/bomb_sc_02.webp",
-      "/projects/TomTheBomb/bomb_sc_03.webp",
-      "/projects/TomTheBomb/bomb_sc_04.webp",
-      "/projects/TomTheBomb/bomb_sc_05.webp",
-      "/projects/TomTheBomb/bomb_sc_06.webp",
-      "/projects/TomTheBomb/bomb_sc_07.webp",
-      "/projects/TomTheBomb/bomb_sc_08.webp",
-      "/projects/TomTheBomb/bomb_sc_09.webp",
+    media: [
+      {
+        type: "video",
+        src: "/projects/TomTheBomb/bomb_video.mp4",
+        poster: "/projects/TomTheBomb/bomb_video_poster.webp",
+      },
+      {
+        type: "image",
+        src: "/projects/TomTheBomb/bomb_sc_01.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/TomTheBomb/bomb_sc_02.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/TomTheBomb/bomb_sc_03.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/TomTheBomb/bomb_sc_04.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/TomTheBomb/bomb_sc_05.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/TomTheBomb/bomb_sc_06.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/TomTheBomb/bomb_sc_07.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/TomTheBomb/bomb_sc_08.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/TomTheBomb/bomb_sc_09.webp",
+        alt: "Screenshot",
+      },
     ],
   },
   // MARK:- This Website
