@@ -277,9 +277,78 @@ export const projects: Project[] = [
     ],
     video: "https://www.youtube.com/embed/Wvt8fark2Hs?si=YedZEm02cCucZfD6",
   },
-  // MARK:- Lighthouse Time Machine
+  // MARK:- Sky Siege
   {
     id: 3,
+    title: "Sky Siege",
+    description: "3D Level Design Blockout",
+    logoPath: "/projects/SkySiege/sky_logo.webp",
+    logoBackgroundPath: "/projects/SkySiege/sky_bg.webp",
+    longDescription:
+      "Sky Siege is an Unreal level blockout that I did for a class in Level Design. The level is designed around the Lyra Game Experience plugin and uses many of its features, such as weapons, control points, and portals. This map went through multiple iterations with changes being done in response to player feedback. I documented the map of the level at each stage of iteration, adding in changes that I could see were necessary in-engine. I used Unreal’s level building tools to place the level geometry and used boolean cuts for more complex geometry.",
+    contributions: [
+      {
+        id: "design",
+        label: "Level Design",
+        points: [
+          "Studied the design of the Lyra Game Experience plugin to properly make a level",
+          "Designed level maps including all key details using Adobe Illustrator",
+          "Blocked out multiple iterations of the level in Unreal Engine",
+          "Responded to peer feedback to understand what changes to make",
+          "Modified sightlines to block off frustrating gameplay points",
+        ],
+        text: "I worked on this level for almost the entirety of a semester for this one class. It was very gratifying being able to make changes after each play session and then see people enjoy the map more and more. I was especially proud of seeing the player fantasy that I set to fulfill actually end up working. I wanted players to feel cool by letting them jump down onto the control points from above. During one of my playtests, I got to be on a team where we gathered at the top bridge and all jumped down on the control point together. It was a pretty special experience.",
+      },
+    ],
+    featured: true,
+    tags: ["Unreal", "Level Design", "Documentation", "Solo"],
+    thumbnail: "/projects/SkySiege/SkySiege16x9.webp",
+    media: [
+      {
+        type: "video",
+        src: "/projects/SkySiege/sky_video.mp4",
+        poster: "/projects/SkySiege/sky_video_poster.webp",
+      },
+      {
+        type: "image",
+        src: "/projects/SkySiege/sky_sc_01.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/SkySiege/sky_sc_02.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/SkySiege/sky_sc_03.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/SkySiege/sky_sc_04.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/SkySiege/sky_sc_05.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/SkySiege/sky_sc_06.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/SkySiege/sky_sc_07.webp",
+        alt: "Screenshot",
+      },
+    ],
+  },
+  // MARK:- Lighthouse Time Machine
+  {
+    id: 4,
     title: "Lighthouse Time Machine",
     description: "2D Action Arcade Game",
     logoPath: "/projects/Lighthouse/lighthouse_logo.webp",
@@ -367,7 +436,7 @@ export const projects: Project[] = [
   },
   // MARK:- Assist Mode
   {
-    id: 4,
+    id: 5,
     title: "Assist Mode",
     description: "2D Point & Click Puzzle Platformer",
     logoPath: "/projects/AssistMode/assist_logo.webp",
@@ -483,7 +552,7 @@ export const projects: Project[] = [
   },
   // MARK:- Little Cowboy
   {
-    id: 5,
+    id: 6,
     title: "Little Cowboy",
     description: "Top-Down Twin-Stick Roguelike",
     longDescription:
@@ -599,85 +668,6 @@ export const projects: Project[] = [
       },
     ],
   },
-  // MARK:- Perfect Princess
-  {
-    id: 6,
-    title: "Perfect Princess Plan",
-    description: "Grid-based Puzzle Game",
-    longDescription:
-      "Perfect Princess Plan is a singleplayer puzzle game where you must help a princess perform perfect pathing to her prince. The central mechanic revolves around dragging masks to dummies to set up a turn-based conveyor-like sequence. This game was made in 48 hours for the Global Game Jam 2026. You can play a version of the game on itch.io today! Just be warned: the puzzles get pretty preposterous!",
-    logoPath: "/projects/PerfectPrincess/princess_logo.webp",
-    logoBackgroundPath: "/projects/PerfectPrincess/princess_bg.webp",
-    linkPath: "https://funrug-studio.itch.io/perfect-princess-plan",
-    linkText: "Link to Itch Page",
-    contributions: [
-      {
-        id: "programming",
-        label: "Programming",
-        points: [
-          "Programmed a data system to save and unlock levels",
-          "Worked with imported art assets to apply them to gameobjects",
-          "Modified gameplay code to be flexible with art assets",
-        ],
-        text: "I mostly worked on programming the UI and getting the different levels to load. I made an entire system for translating button clicks to load specific scenes based on unlock data. We ran into a lot of build issues at the end, which we managed to fix a bit after the deadline.",
-      },
-      {
-        id: "ui",
-        label: "UI",
-        points: [
-          "Implemented mask dragging from canvas to world sprites",
-          "Created smooth transitions between levels with a curtain wipe",
-          "Designed a map menu for choosing which levels to play",
-        ],
-        text: "The UI for this game ended up being pretty troublesome, as we had to resize the game space using a camera to render the grid spaces at a larger size. This meant that dragging the masks onto the pieces had to go through a render texture to work. Hopefully we never design a game to block ourselves like this again!",
-      },
-    ],
-    featured: false,
-    tags: ["Unity", "C#", "Programming", "UI", "Game Jam"],
-    thumbnail: "/projects/PerfectPrincess/PerfectPrincessPlan16x9.webp",
-    media: [
-      {
-        type: "video",
-        src: "/projects/PerfectPrincess/princess_video.mp4",
-        poster: "/projects/PerfectPrincess/princess_video_poster.webp",
-      },
-      {
-        type: "image",
-        src: "/projects/PerfectPrincess/princess_sc_01.webp",
-        alt: "Screenshot",
-      },
-      {
-        type: "image",
-        src: "/projects/PerfectPrincess/princess_sc_02.webp",
-        alt: "Screenshot",
-      },
-      {
-        type: "image",
-        src: "/projects/PerfectPrincess/princess_sc_03.webp",
-        alt: "Screenshot",
-      },
-      {
-        type: "image",
-        src: "/projects/PerfectPrincess/princess_sc_04.webp",
-        alt: "Screenshot",
-      },
-      {
-        type: "image",
-        src: "/projects/PerfectPrincess/princess_sc_05.webp",
-        alt: "Screenshot",
-      },
-      {
-        type: "image",
-        src: "/projects/PerfectPrincess/princess_sc_06.webp",
-        alt: "Screenshot",
-      },
-      {
-        type: "image",
-        src: "/projects/PerfectPrincess/princess_sc_07.webp",
-        alt: "Screenshot",
-      },
-    ],
-  },
   // MARK:- Tom The Bomb
   {
     id: 7,
@@ -786,6 +776,85 @@ export const projects: Project[] = [
       {
         type: "image",
         src: "/projects/TomTheBomb/bomb_sc_09.webp",
+        alt: "Screenshot",
+      },
+    ],
+  },
+  // MARK:- Perfect Princess
+  {
+    id: 8,
+    title: "Perfect Princess Plan",
+    description: "Grid-based Puzzle Game",
+    longDescription:
+      "Perfect Princess Plan is a singleplayer puzzle game where you must help a princess perform perfect pathing to her prince. The central mechanic revolves around dragging masks to dummies to set up a turn-based conveyor-like sequence. This game was made in 48 hours for the Global Game Jam 2026. You can play a version of the game on itch.io today! Just be warned: the puzzles get pretty preposterous!",
+    logoPath: "/projects/PerfectPrincess/princess_logo.webp",
+    logoBackgroundPath: "/projects/PerfectPrincess/princess_bg.webp",
+    linkPath: "https://funrug-studio.itch.io/perfect-princess-plan",
+    linkText: "Link to Itch Page",
+    contributions: [
+      {
+        id: "programming",
+        label: "Programming",
+        points: [
+          "Programmed a data system to save and unlock levels",
+          "Worked with imported art assets to apply them to gameobjects",
+          "Modified gameplay code to be flexible with art assets",
+        ],
+        text: "I mostly worked on programming the UI and getting the different levels to load. I made an entire system for translating button clicks to load specific scenes based on unlock data. We ran into a lot of build issues at the end, which we managed to fix a bit after the deadline.",
+      },
+      {
+        id: "ui",
+        label: "UI",
+        points: [
+          "Implemented mask dragging from canvas to world sprites",
+          "Created smooth transitions between levels with a curtain wipe",
+          "Designed a map menu for choosing which levels to play",
+        ],
+        text: "The UI for this game ended up being pretty troublesome, as we had to resize the game space using a camera to render the grid spaces at a larger size. This meant that dragging the masks onto the pieces had to go through a render texture to work. Hopefully we never design a game to block ourselves like this again!",
+      },
+    ],
+    featured: false,
+    tags: ["Unity", "C#", "Programming", "UI", "Game Jam"],
+    thumbnail: "/projects/PerfectPrincess/PerfectPrincessPlan16x9.webp",
+    media: [
+      {
+        type: "video",
+        src: "/projects/PerfectPrincess/princess_video.mp4",
+        poster: "/projects/PerfectPrincess/princess_video_poster.webp",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_01.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_02.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_03.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_04.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_05.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_06.webp",
+        alt: "Screenshot",
+      },
+      {
+        type: "image",
+        src: "/projects/PerfectPrincess/princess_sc_07.webp",
         alt: "Screenshot",
       },
     ],
