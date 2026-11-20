@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Contribution } from "../../data/projects";
 import "./Contributions.css";
+import MediaViewer from "../MediaViewer/MediaViewer";
 
 interface Props {
   contributions: Contribution[];
@@ -10,6 +11,7 @@ function Contributions({ contributions }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   if (contributions.length === 0) return null;
+  const active = contributions[selectedIndex];
 
   return (
     <div className="contributions">
@@ -29,29 +31,18 @@ function Contributions({ contributions }: Props) {
         ))}
       </div>
       <div className="contribution">
-        {contributions.map(
-          (contribution, i) =>
-            i === selectedIndex && (
-              <div>
-                {contribution.image && (
-                  <img
-                    src={contribution.image}
-                    alt={contribution.imageAlt}
-                    className="contribution-image pixel-art"
-                  />
-                )}
-                <p>What I Did for {contribution.label}:</p>
-                {contribution.points[0] && (
-                  <ul>
-                    {contribution.points.map((point) => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
-                )}
-                <p>{contribution.text}</p>
-              </div>
-            ),
-        )}
+        <div>
+          <p>What I Did for {active.label}:</p>
+          {active.points[0] && (
+            <ul>
+              {active.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          )}
+          {active.media && <MediaViewer item={active.media} />}
+          {active.text && <p>{active.text}</p>}
+        </div>
       </div>
     </div>
   );

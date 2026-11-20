@@ -1,9 +1,7 @@
 import { useState } from "react";
 import "./Gallery.css";
-
-export type MediaItem =
-  | { type: "image"; src: string; alt: string }
-  | { type: "video"; src: string; poster: string };
+import MediaViewer, { MediaItem } from "../MediaViewer/MediaViewer";
+import MediaThumbnailViewer from "../MediaViewer/MediaThumbnailViewer";
 
 function Gallery({ items }: { items: MediaItem[] }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -26,19 +24,7 @@ function Gallery({ items }: { items: MediaItem[] }) {
         >
           {"<"}
         </button>
-        {current.type === "video" ? (
-          <video
-            className="gallery-main"
-            src={current.src}
-            poster={current.poster}
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-        ) : (
-          <img className="gallery-main" src={current.src} alt={current.alt} />
-        )}
+        <MediaViewer item={current} />
         <button
           className="gallery-nav"
           onClick={() => setSelectedIndex((prev) => (prev + 1) % items.length)}
@@ -56,16 +42,7 @@ function Gallery({ items }: { items: MediaItem[] }) {
             }
             onClick={() => setSelectedIndex(i)}
           >
-            {src.type === "video" ? (
-              <img
-                className="pixel-art"
-                src={src.poster}
-                alt={`Video`}
-                loading="lazy"
-              />
-            ) : (
-              <img className="pixel-art" src={src.src} alt={src.alt} />
-            )}
+            <MediaThumbnailViewer item={src} />
           </button>
         ))}
       </div>

@@ -1,10 +1,9 @@
-import { MediaItem } from "../components/Gallery/Gallery";
+import { MediaItem } from "../components/MediaViewer/MediaViewer";
 
 export interface Contribution {
   id: string;
   label: string;
-  image?: string;
-  imageAlt?: string;
+  media?: MediaItem;
   points: string[];
   text: string;
 }
@@ -48,7 +47,6 @@ export const projects: Project[] = [
           "Created each of the locations for the game",
           "Designed over 100 of the game’s maps",
         ],
-        imageAlt: "MAGE Design Image",
         text: "I was a part of the design for MAGE since the very beginning. Alex and I designed and programmed the original prototype for the game together. Since the start of development, I helped figure out each of the Mages and fully took on the role of creating maps for the game. I also suggested screenwrapping as a main focus for the maps, as we ran into an issue of players camping.",
       },
       {
@@ -298,6 +296,10 @@ export const projects: Project[] = [
           "Modified sightlines to block off frustrating gameplay points",
         ],
         text: "I worked on this level for almost the entirety of a semester for this one class. It was very gratifying being able to make changes after each play session and then see people enjoy the map more and more. I was especially proud of seeing the player fantasy that I set to fulfill actually end up working. I wanted players to feel cool by letting them jump down onto the control points from above. During one of my playtests, I got to be on a team where we gathered at the top bridge and all jumped down on the control point together. It was a pretty special experience.",
+        media: {
+          type: "pdf",
+          src: "/projects/SkySiege/sky_design_pdf.pdf",
+        },
       },
     ],
     featured: true,
