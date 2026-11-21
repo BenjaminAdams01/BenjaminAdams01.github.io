@@ -18,6 +18,10 @@
   background-color: var(--surface);
 }
 
+.card hr {
+  color: var(--text-muted);
+}
+
 .page {
   max-width: 1100px;
   margin: 0 auto;
@@ -54,4 +58,18 @@
 .bottom-right-button {
   margin-left: auto;
   padding: 0.1rem 0.2rem;
+}
+
+.columns-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.column-text p {
+  color: var(--text-muted);
+}
+
+.column-text h1 {
+  color: var(--text);
 }
